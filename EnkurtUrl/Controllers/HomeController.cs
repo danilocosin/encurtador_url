@@ -1,6 +1,7 @@
 ﻿using SiteEnkurtUrl.Models.Response;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -13,7 +14,9 @@ namespace EnkurtUrl.Controllers
     {
         public async Task<ActionResult> Index()
         {
-            string apiUrl = "http://localhost:49677/api/Stats/getStats";
+            //string apiUrl = "http://localhost:49677/api/Stats/getStats";
+
+            string apiUrl = ConfigurationSettings.AppSettings["UrlWebApi"].ToString();
 
             UrlStats objUrl = new UrlStats();
 

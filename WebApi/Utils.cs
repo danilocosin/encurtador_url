@@ -257,7 +257,8 @@ namespace WebApi
             {
                 sql = "Select Top 10 url.Id, url.ShortUrl, url.Url, url.UserId, Count(*) as 'Hits'  From tblUrlLog log"
                               + " inner join tblUrl url on url.Id = log.Id"
-                              + " Group By url.Id, url.ShortUrl, url.Url, url.UserId";
+                              + " Group By url.Id, url.ShortUrl, url.Url, url.UserId"
+                              +"  Order By 5 Desc";
 
                 dt = SqlServer.Recordset(sql);
 
@@ -269,7 +270,8 @@ namespace WebApi
                 sql = "Select url.Id, url.ShortUrl, url.Url, url.UserId, Count(*) as 'Hits'  From tblUrlLog log"
                           + " inner join tblUrl url on url.Id = log.Id "
                           + " Where url.id = @Id "
-                          + " Group By url.Id, url.ShortUrl, url.Url, url.UserId ";
+                          + " Group By url.Id, url.ShortUrl, url.Url, url.UserId "
+                          + "  Order By 5 Desc";
 
                 Params p = new Params();
                 p.Add("@Id", id);
