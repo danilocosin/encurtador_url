@@ -1,0 +1,4 @@
+W:\Projeto-Time\ProjetoUrl\DataBase\bin\Debug\DataBase.dll
+W:\Projeto-Time\ProjetoUrl\DataBase\bin\Debug\DataBase.pdb
+W:\Projeto-Time\ProjetoUrl\DataBase\obj\Debug\DataBase.dll
+W:\Projeto-Time\ProjetoUrl\DataBase\obj\Debug\DataBase.pdb

@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>GET/Stats</h2>
+    <p class="lead">Hits <span>@ViewBag.Retorno.hits</span></p>
+    <p class="lead">Quantidade de Urls cadastradas <span>@ViewBag.Retorno.urlCount</span></p>
+</div>
+
+<div class="row">
+
+    <table class="table table-filter">
+        <tbody>
+
+            @foreach (var item in ViewBag.Retorno.topUrls)
+            {
+             <tr data-status="pagado" >
+                <td>
+                    <div class="ckbox">
+                        <input type="checkbox" id="checkbox4" checked>
+                        <label for="checkbox4"></label>
+                    </div>
+                </td>
+                <td>
+                    <a href="javascript:;" class="star star-checked">
+                        <i class="glyphicon glyphicon-star"></i>
+                    </a>
+                </td>
+                <td>
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="http://designmodo.github.io/Flat-UI/img/icons/svg/retina.svg" class="media-photo">
+                        </a>
+                        <div class="media-body">
+                            <span class="media-meta pull-right">@DateTime.Now.Year</span>
+                            <h4 class="title">
+                                @item.RealUrl
+                                <span class="pull-right pagado">( Url Ok )</span>
+                            </h4>
+                            <p class="summary">Id : @item.id</p>
+                            <p class="summary">Hits : @item.hits</p>
+                            <p class="summary">Short Url : @item.ShortenedUrl</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<p><a href="http://asp.net" class="btn btn-primary btn-lg">Atualizar</a></p>
