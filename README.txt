@@ -32,9 +32,12 @@ Criar um usuário,  e o no final do script executar os grants para o usuário cria
 
 <add key="UrlWebApi" value="http://localhost:49677/api/Stats/getStats"/>
 
-***  SUBSTITUIR PELO CAMINHO DA WEB API PARA QUE A APLICAÇÃO WEB POSSA CONSUMILA.
+***  SUBSTITUIR PELO CAMINHO DA WEB API PARA QUE A APLICAÇÃO WEB POSSA CONSUMI-LA.
 
-[ 4 ] Chamados realizadas em local Host, todas Funcionando.
+[ 4 ] Chamadas realizadas em local Host via PostMan, todas Funcionando.
+
+
+********* SUBSTITUIR NAS CHAMADAS OS IDS CORRESPONDENTES, IDS ABAIXO APENAS EXEMPLO ********* 
 
 
 [ *** Inserir Usuário ] 
@@ -47,7 +50,7 @@ http://localhost:49677/api/Urls/GetById?id=12
 http://localhost:49677/api/Stats/getStats
 
 *** Obter Status do Sistema por Id
-http://localhost:49677/api/Stats/getStats?id=2
+http://localhost:49677/api/Stats/getStats?id=12
 
 *** Adicionar uma Url
 http://localhost:49677/api/Users/Addurl?userid=danilo&url=HTTP://www.indebug.com.br
